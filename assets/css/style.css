@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+	scroll-behavior: smooth;
+}
+
+/*scroll_up*/
+.top img
+{
+	position: fixed;
+	opacity: 0.9;
+	bottom: 30px;
+	right: 40px;
+	z-index: 1;
+}
+
+/*for rgb scroll*/
+::-webkit-scrollbar
+{
+	width: 0;
+}
+
+#scrollpath
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: rgba(255,255,255,0,05);
+}
+#progressbar
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	/*height: 100%;*/
+	background: linear-gradient(to top, #008aff,#00ffe7);
+	animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+{
+	0%,100%
+	{
+		filter: hue-rotate(0deg);
+	}
+	50%
+	{
+		filter: hue-rotate(360deg);
+	}
+}
+
+#progressbar:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #008aff,#00ffe7);
+	filter: blur(10px);
+}
+#progressbar:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #008aff,#00ffe7);
+	filter: blur(30px);
+}
+
+/*---------------------- header ----------------------*/
+
+header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 100px;
+	z-index: 1000;
+	transition: 0.6s;
+}
+
+header.sticky
+{
+	padding: 5px 100px;
+	background: #75b8ff;
+	border-bottom: 1px solid rgba(0,0,0,.1); /*rgba-> header line*/
+}
+
+header .logo
+{
+	position: relative;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: 1.5s /* Unix 0.6s*/
+}
+
+header ul
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header ul li
+{
+	position: relative;
+	list-style: none;	/*delete li dot*/
+}
+
+header ul li a
+{
+	position: relative;
+	margin: 0 15px;
+	text-decoration: none;
+	color: #fff;
+	letter-spacing: 2px;
+	font-weight: 300;
+	transition: 1.6s; /*menu 0.6s*/
+}
+
+header.sticky .logo,
+header.sticky ul li a
+{
+	color: #fff; /*logo & menu white*/
+}
+
+
+
+/*---------------------- banner ----------------------*/
+.banner
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url(../img/home.jpg);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+.banner h2
+{
+	color: #fff;
+	font-size: 50px;
+	/*text-transform: uppercase;*/
+	text-align: center;
+	line-height: 1.2em; /*line spacing*/
+}
+
+.banner h2 span
+{
+	color: #4978ff;
+}
+
+.banner p
+{
+	margin: 0 300px 0 300px;
+	font-size: 20px;
+}
+
+/*---------------------- section ----------------------*/
+.sec
+{
+	background: rgb(7,1,107);
+	background: linear-gradient(90deg, rgba(7,1,107,1) 0%, rgba(0,150,189,1) 50%, rgba(0,0,77,1) 100%);
+	padding: 100px;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.sec .content
+{
+	width: 100%;
+	margin-top: -100px;
+}
+
+/*---------------------- article position ----------------------*/
+.artikelright
+{
+	position: relative;
+	margin-left: 30px;
+}
+
+.artikelleft
+{
+	position: relative;
+	margin-left: -10px;
+}
+
+/*-------------------------- Manfaat -------------------------*/
+.artikel
+{
+	position: relative;
+	display: flex;
+	margin-left: 200px;
+	color: #fff;
+}
+
+.artikel img
+{
+	width: 400px;
+	margin-left: -250px;
+}
+
+
+/*-------------------------- Manfaat1 -------------------------*/
+.artikel1
+{
+	position: relative;
+	display: flex;
+	color: #fff;
+}
+
+.artikel1 img
+{	
+	width: 400px;
+}
+
+
+/*-------------------------- Manfaat2 -------------------------*/
+.artikel2
+{
+	position: relative;
+	display: flex;
+	margin-left: 200px;
+	color: #fff;
+}
+
+.artikel2 img
+{
+	width: 400px;
+	margin-top: 30px;
+	margin-left: -250px;
+}
+
+
+/*-------------------------- Manfaat3 -------------------------*/
+.artikel3
+{
+	position: relative;
+	display: flex;
+	color: #fff;
+}
+
+.artikel3 img
+{	
+	margin-top: 60px;
+	width: 400px;
+}
+
+
+/*-------------------------- Manfaat4 -------------------------*/
+.artikel4
+{
+	position: relative;
+	display: flex;
+	margin-left: 200px;
+	color: #fff;
+}
+
+.artikel4 img
+{
+	width: 400px;
+	margin-top: 30px;
+	margin-left: -250px;
+}
+
+
+/*-------------------------- Manfaat5 -------------------------*/
+.artikel5
+{
+	position: relative;
+	display: flex;
+	color: #fff;
+}
+
+.artikel5 img
+{	
+	margin-right: -70px;
+	margin-top: -60px;
+	width: 500px;
+}
+
+.media5
+{
+	width: 100%;
+	margin-right: 50px;
+}
+
+/*-------------------------- tips -------------------------*/
+.tips img
+{	
+	width: 100%;
+}
+
+
+/*---------------------- Profil ----------------------*/
+.bio 
+{
+    text-align: center;
+    margin-top: -10px;
+}
+
+.profile img 
+{	
+    width: 150px;
+}
+
+.card 
+{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: -100px;
+   width: 50vh;
+   width: 100%;
+}
+
+figcaption, tbody
+{
+	color: #cce0ff;
+}
+
+/*-------------------------- font -------------------------*/
+
+h3
+{
+	position: relative;
+	max-width: 550px;
+	margin-right: -50px;
+	font-size: 36px;
+	font-weight: 200;
+}
+
+h4
+{
+	color: #fff;
+	font-size: 21px;
+}
+
+h5
+{
+	font-size: 22px;
+	font-weight: 200;
+	margin-bottom: 5px;
+}
+
+p
+{
+	 position: relative;
+	/*text-align: center;*/
+	 font-size: 18px;
+	 font-weight: 300;
+	 margin-bottom: 20px;
+	 letter-spacing: 1px;
+}
+
+/*-------------------------- contact -------------------------*/
+.contact
+{
+	background: url(../img/contact.jpg);
+	background-size: cover;
+}
+
+.contact h3
+{
+	color: #fff;
+	margin-top: 100px;
+}
+
+.contactForm
+{
+	position: relative;
+	display: flex;
+
+	max-width: 1800px;
+}
+
+.contactForm form
+{
+	position: relative;
+	width: 100%;
+}
+
+.contactForm .row100
+{
+	display: flex;
+	width: 100%;
+}
+
+.contactForm .row100 .inputBx50
+{
+	width: 50%;
+	margin: 0 20px;
+}
+
+.contactForm .row100 .inputBx100
+{
+	width: 100%;
+	margin: 0 20px;
+}
+
+.contactForm .row100 input,
+.contactForm .row100 textarea
+{
+	position: relative;
+	border: none;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	background: transparent;
+	width: 100%;
+	padding: 10px 0;
+	outline: none;
+	font-size: 18px;
+	font-weight: 300;
+	margin: 20px 0;
+	resize: none;
+}
+
+.contactForm .row100 textarea
+{
+	height: 100px;
+}
+
+.contactForm .row100 input:placeholder,
+.contactForm .row100 textarea:placeholder
+{
+	color: rgba(225,225,225,0.5);
+}
+
+.contactForm .row100 input[type="submit"]
+{
+	background: #fff;
+	color: #000;
+	max-width: 100px; 
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+	font-weight: 500;
+}
+
+
+/*-------------------------- tdbio -------------------------*/
+td
+{
+	position: relative;
+	width: 200px;
+	margin-right: -50px;
+	/*font-size: 36px;*/
+	font-weight: 200px;
+}
+
+
+/*-------------------------- icon -------------------------*/
+.icon
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.icon ul
+{
+	display: flex;
+}
+
+.icon ul li
+{
+	list-style: none;
+}
+
+.icon ul li a
+{
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 30px;
+}
+
+.icon ul li a img
+{
+	filter: invert(1);
+	max-width: 40px; 
+	font-size: 24px;
+}
+
+.icon ul li a:hover img
+{
+	opacity: 0.5;
+}
+
+
+/*-------------------------- footer-------------------------*/
+footer
+{
+    padding: 10px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+}
+
+
+.toggle
+{
+	display: none;
+}
+
+/*for devices under 1000px*/
+@media screen and (max-width: 1000px)
+{
+   .toggle
+	{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+	}	
+
+	.toggle:before
+	{
+		content: '';
+		position: absolute;
+		top: 4px;
+		width: 100%;
+		height: 2px;
+		background: #000;
+		z-index: 1;
+		box-shadow: 0 10px 0 #000;
+		transition: 0.5s;
+	}
+
+	.toggle:after
+	{
+		content: '';
+		position: absolute;
+		bottom: 4px;
+		width: 100%;
+		height: 2px;
+		background: #000;
+		z-index: 1;
+		transition: 0.5s;
+	}
+	header,
+	header.sticky
+	{
+		padding: 5px 50px;
+		background: #75b8ff;
+	}
+
+	header ul
+	{
+		position: absolute;
+		top: 59px;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		text-align: center;
+		overflow: auto;
+		background: #75b8ff;
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	header.active ul
+	{
+		visibility: visible;
+		opacity: 1;
+		display: block;
+	}
+
+	header.active ul li a
+	{
+		display: inline-block;
+		margin: 10px 0;
+		font-size: 20px;
+		padding-top: 20px;
+	}
+
+	header .logo,
+	header ul li a
+	{
+		color: #000;
+	}
+
+	.banner
+	{
+		background-position: center;
+	}
+
+	.banner h2
+	{
+		font-size: 40px;
+		/*padding: 0 50px;*/
+	}
+
+	.banner p
+	{
+		font-size: 18px;
+		width: 50vh;
+	}
+
+	.sec
+	{
+		padding: 100px 50px 50px 50px;
+	}
+
+	/*-------------------------- position -------------------------*/
+	.artikelright
+	{
+		position: relative;
+		margin-left: -400px;
+		margin-right: 200px;
+		margin-top: 400px;
+	}
+
+	.artikelleft
+	{
+		position: relative;
+		margin-left: 4px;
+		margin-right: -95px;
+		margin-top: 400px;
+	}
+	/*-------------------------- manfaat -------------------------*/
+	.artikel
+	{
+		margin-top: 100px;
+		width: 100%;
+	}
+
+	.media
+	{
+		position: relative;
+		margin-left: 53px;
+		width: 100%;
+	}
+
+	/*-------------------------- manfaat1 -------------------------*/
+	.artikel1
+	{
+		width: 100%;
+	}
+
+	.media1
+	{
+		position: relative;
+		margin-left: -300px;
+		width: 100%;
+	}
+
+	/*-------------------------- manfaat2 -------------------------*/
+	.artikel2
+	{
+		width: 100%;
+	}
+
+	.media2
+	{
+		position: relative;
+		margin-left: 53px;
+		width: 100%;
+	}
+
+	/*-------------------------- manfaat3 -------------------------*/
+	.artikel3
+	{
+		width: 100%;
+	}
+
+	.media3
+	{
+		position: relative;
+		margin-left: -300px;
+		width: 100%;
+	}
+
+	/*-------------------------- manfaat4 -------------------------*/
+	.artikel4
+	{
+		width: 100%;
+	}
+
+	.media4
+	{
+		position: relative;
+		margin-left: 53px;
+		width: 100%;
+	}
+
+	/*-------------------------- manfaat5 -------------------------*/
+	.artikel5
+	{
+		width: 100%;
+	}
+
+	.media5
+	{
+		position: relative;
+		margin-left: -300px;
+		width: 100%;
+	}
+
+	/*-------------------------- manfaat5 -------------------------*/
+	.mediatips
+	{
+		/*position: relative;*/
+		/*margin-left: -300px*/
+		width: 100%;
+	}
+
+	/*-------------------------- biodata -------------------------*/
+	.profile
+	{
+		position: relative;
+		width: 100%;
+	}
+
+	.card
+	{
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		width: 400px;
+		margin-top: 430px;
+		margin-left: -400px;
+	}
+
+	/*-------------------------- contactform -------------------------*/
+	.mediaform
+	{
+		position: relative;
+
+	}
+
+	.row100
+	{
+		flex-direction: column;
+	}
+
+	.contactForm .row100 .inputBx50, 
+	.contactForm .row100 .inputBx100
+	{
+		width: 100%;
+		margin: 0;
+	}
+
+}
+
+.map iframe
+{
+	width: 100%;
+	border: 0;
+	width: 100%;
+	height: 300px;
+}
